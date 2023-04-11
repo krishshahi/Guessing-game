@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import Cards from './components/Cards'
+
+const App = () => {
+  const handleClick = () => {
+    window.location.reload();
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="title">
+        <span >M</span>
+        <span >E</span>
+        <span >M</span>
+        <span >O</span>
+        <span >R</span>
+        <span >Y</span>
+        &nbsp;&nbsp;&nbsp;
+        <span >G</span>
+        <span >A</span>
+        <span >M</span>
+        <span >E</span>
+      </div>
+      <div className='btn-1'>
+        <button className='btn' onClick={handleClick}>Start New Game</button>
+      </div>
+
+      <Cards />
     </div>
   );
 }
